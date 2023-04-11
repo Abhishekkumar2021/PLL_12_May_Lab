@@ -34,7 +34,7 @@ public class Dijsktra {
     }
 
     public void dijsktra() {
-        PriorityQueue queue = new PriorityQueue(V);
+        PriorityQueue queue = new PriorityQueue(V*V);
         distance[src] = 0;
         queue.insert(new Pair(src, 0));
         while (!queue.isEmpty()) {
@@ -95,7 +95,7 @@ public class Dijsktra {
             writer.close();
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }  
     }
 
     public void showPath(String filename) {
